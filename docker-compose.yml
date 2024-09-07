@@ -1,0 +1,47 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - backend
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nttdata
+
+  client-person:
+    build: ../client-person-service/.
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/nttdata?reWriteBatchedInserts=true
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      ACCOUNT_MOVEMENT_SERVICE: http://account-movement:8081/api
+      SPRING_PROFILES_ACTIVE: prod
+    networks:
+      - backend
+  account-movement:
+    build: ../movement-account-service/.
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/nttdata?reWriteBatchedInserts=true
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      CLIENT_PERSON_SERVICE: http://client-person:8080/api
+      SPRING_PROFILES_ACTIVE: prod
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
