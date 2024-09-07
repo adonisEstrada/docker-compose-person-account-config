@@ -1,0 +1,34 @@
+[
+  {
+    "movementId": "c1f3b8c7-1c89-4b2a-a3e0-4a7bdf5376f2",
+    "movementType": "OUTGOING",
+    "transactionDate": "2024-09-06T10:00:00Z",
+    "amount": 575.00,
+    "currentBalance": 1425.00,
+    "accountId": "478758"
+  },
+  {
+    "movementId": "d4c0d8ab-6e68-4e78-85d4-231fa71c0b7f",
+    "movementType": "INCOMING",
+    "transactionDate": "2024-09-06T10:15:00Z",
+    "amount": 600.00,
+    "currentBalance": 700.00,
+    "accountId": "225487"
+  },
+  {
+    "movementId": "f9e4d1bc-8123-4a4b-bd5c-5f8e3186f08e",
+    "movementType": "INCOMING",
+    "transactionDate": "2024-09-06T10:30:00Z",
+    "amount": 150.00,
+    "currentBalance": 150.00,
+    "accountId": "495878"
+  },
+  {
+    "movementId": "3e3bb8da-9172-4ab2-a5d5-bfc8b77ff487",
+    "movementType": "OUTGOING",
+    "transactionDate": "2024-09-06T10:45:00Z",
+    "amount": 540.00,
+    "currentBalance": 0.00,
+    "accountId": "496825"
+  }
+]

@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "ddc033ca-9163-442a-96eb-6346fe4acfb8",
+		"name": "nttdata",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17303242"
+	},
+	"item": [
+		{
+			"name": "createClients",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"Jose Lema\",\r\n        \"gender\": \"Male\",\r\n        \"age\": 30,\r\n        \"identification\": 1234567890,\r\n        \"address\": \"Otavalo sn y principal\",\r\n        \"phoneNumber\": \"098254785\",\r\n        \"password\": \"1234\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"name\": \"Marianela Montalvo\",\r\n        \"gender\": \"Female\",\r\n        \"age\": 30,\r\n        \"identification\": 2345678901,\r\n        \"address\": \"Amazonas y NNUU\",\r\n        \"phoneNumber\": \"097548965\",\r\n        \"password\": \"5678\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"name\": \"Juan Osorio\",\r\n        \"gender\": \"Male\",\r\n        \"age\": 30,\r\n        \"identification\": 3456789012,\r\n        \"address\": \"13 junio y Equinoccial\",\r\n        \"phoneNumber\": \"098874587\",\r\n        \"password\": \"1245\",\r\n        \"status\": true\r\n    }\r\n    \r\n]\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/createClients"
+			},
+			"response": []
+		},
+		{
+			"name": "createClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Adonis Estrada\",\r\n  \"gender\": \"Male\",\r\n  \"age\": 2,\r\n  \"identification\": \"1760920155\",\r\n  \"address\": \"Quito\",\r\n  \"phoneNumber\": \"097807525\",\r\n  \"password\": \"123456\",\r\n  \"status\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/createClient"
+			},
+			"response": []
+		},
+		{
+			"name": "getClients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/getClients"
+			},
+			"response": []
+		},
+		{
+			"name": "createAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\": \"495878\",\r\n    \"accountType\": \"SAVINGS\",\r\n    \"initialBalance\": 0.00,\r\n    \"status\": \"ACTIVE\",\r\n    \"dni\": \"3456789012\",\r\n    \"owner\": \"Juan Osorio\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/api/createAccount"
+			},
+			"response": []
+		},
+		{
+			"name": "saveUpdateMovement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movementType\": \"INCOMING\",\r\n    \"amount\": 356.00,\r\n    \"currentBalance\": 250.00,\r\n    \"accountId\": \"2345678901\"\r\n  }\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/api/saveUpdateMovement"
+			},
+			"response": []
+		},
+		{
+			"name": "getMovementByClientAndDates",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movementType\": \"OUTGOING\",\r\n    \"amount\": 575.00,\r\n    \"currentBalance\": 1425.00,\r\n    \"accountId\": \"478758\"\r\n  }\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/getMovementByClientAndDates?dni=2345678901&initDate=2024-09-06 01:30:00&endDate=2024-09-06 19:30:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"getMovementByClientAndDates"
+					],
+					"query": [
+						{
+							"key": "dni",
+							"value": "2345678901"
+						},
+						{
+							"key": "initDate",
+							"value": "2024-09-06 01:30:00"
+						},
+						{
+							"key": "endDate",
+							"value": "2024-09-06 19:30:00"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

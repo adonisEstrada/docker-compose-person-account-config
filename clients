@@ -1,0 +1,30 @@
+{
+        "name": "Jose Lema",
+        "gender": "Male",
+        "age": 30,
+        "identification": 1234567890,
+        "address": "Otavalo sn y principal",
+        "phoneNumber": "098254785",
+        "password": "1234",
+        "status": true
+    },
+    {
+        "name": "Marianela Montalvo",
+        "gender": "Female",
+        "age": 30,
+        "identification": 2345678901,
+        "address": "Amazonas y NNUU",
+        "phoneNumber": "097548965",
+        "password": "5678",
+        "status": true
+    },
+    {
+        "name": "Juan Osorio",
+        "gender": "Male",
+        "age": 30,
+        "identification": 3456789012,
+        "address": "13 junio y Equinoccial",
+        "phoneNumber": "098874587",
+        "password": "1245",
+        "status": true
+    }

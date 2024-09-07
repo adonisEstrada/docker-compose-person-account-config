@@ -1,0 +1,34 @@
+[
+  {
+    "accountNumber": "478758",
+    "accountType": "SAVINGS",
+    "initialBalance": 2000.00,
+    "status": "ACTIVE",
+    "dni": "1234567890",
+    "owner": "Jose Lema"
+  },
+  {
+    "accountNumber": "225487",
+    "accountType": "CHECKING",
+    "initialBalance": 100.00,
+    "status": "ACTIVE",
+    "dni": "2345678901",
+    "owner": "Marianela Montalvo"
+  },
+  {
+    "accountNumber": "495878",
+    "accountType": "SAVINGS",
+    "initialBalance": 0.00,
+    "status": "ACTIVE",
+    "dni": "3456789012",
+    "owner": "Juan Osorio"
+  },
+  {
+    "accountNumber": "496825",
+    "accountType": "SAVINGS",
+    "initialBalance": 540.00,
+    "status": "ACTIVE",
+    "dni": "2345678901",
+    "owner": "Marianela Montalvo"
+  }
+]
